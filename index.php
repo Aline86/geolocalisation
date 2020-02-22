@@ -48,16 +48,18 @@ function myFunction(arr, value, villecp, div, linkinfo) {
         tableau_code=[]
         for (i=0; i<arr.length; i++){
          
-          if(arr[i].postal.includes('-')){
-            villestirets=arr[i].postal.split("-")
-           console.log(villestirets)
-           for(i=0; i<villestirets.length; i++){
-              tableau_code.push(villestirets[i])
-            }
-                 
+         if(arr[i].postal.includes('-')){
+           villestirets=arr[i].postal.split("-")
+          console.log(villestirets)
+          for(i=0; i<villestirets.length; i++){
+             tableau_code.push(villestirets[0])
+             
            }
-          
-        }
+         break;     
+         
+         
+       }
+     }
            for (i=0; i<arr.length; i++){
           
             tableau_ville.push(arr[i].ville_nom)
